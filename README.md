@@ -83,19 +83,19 @@ In design of the code, 2 main things were always under consideration:
 		transaction_amount integer not null,
 		transaction_date text not null,
 		created_date text not null
-	)
+	),
 
 	curation_merchant_details_hub (
 		merchant_id integer not null,
 		created_date text not null
-	)
+	),
 
 	curation_transaction_merchant_link (
 		transaction_id integer not null,
 		payer_merchant_id integer not null,
 		payee_merchant_id integer not null,
 		created_date text not null
-	)
+	),
 	
 	curation_transaction_historical_sat (
 		transaction_id integer not null,
@@ -106,7 +106,7 @@ In design of the code, 2 main things were always under consideration:
 		transcation_status text not null,
 		created_date text not null
 	)
-		
+		,
 	curation_merchant_details_sat (
 		merchant_id integer not null,
 		merchant_company_name text,
@@ -120,7 +120,7 @@ In design of the code, 2 main things were always under consideration:
 		merchant_email text,
 		merchant_contact_number text,
 		created_date text not null
-	)
+	),
 ```    
 <br><br>
 
