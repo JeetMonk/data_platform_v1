@@ -74,8 +74,58 @@ In design of the code, 2 main things were always under consideration:
 7. Curation layer in main orchestration code and src/data_parallel_processes.py
     In curation layer, I use data vault modeling, in this model, all the data were stored in 3 type of tables: hubs, links and Satellites
     Merchant data will be updated once we receive the latest file.
-    The entire curation process is managed by a control table control_curation_stream, both target curation table and corresponding DML queries were stored in it, so that in the future if any changes, we do not need to make any change on the code but only update 1 record of this table.
+    The entire curation process is managed by a control table control_curation_stream, both target curation table and corresponding DML queries were stored in it, so that in the future if any changes, we do not need to make any change on the code but only update 1 record of this table.<br>
+
+    Curation tables which can be used for analysts and data scientists (DB or table replica can be used for scientists to run their own tranning, supervised learning etc.)
+  
+  curation_transaction_historical_hub (
+		transaction_id integer not null,
+		transaction_amount integer not null,
+		transaction_date text not null,
+		created_date text not null
+	)
+
+	curation_merchant_details_hub (
+		merchant_id integer not null,
+		created_date text not null
+	)
+
+	curation_transaction_merchant_link (
+		transaction_id integer not null,
+		payer_merchant_id integer not null,
+		payee_merchant_id integer not null,
+		created_date text not null
+	)
+	
+	curation_transaction_historical_sat (
+		transaction_id integer not null,
+		transaction_amount integer not null,
+		transaction_date text not null,
+		created_date text not null,
+		transaction_approved text not null,
+		transcation_status text not null,
+		created_date text not null
+	)
+		
+	curation_merchant_details_sat (
+		merchant_id integer not null,
+		merchant_company_name text,
+		merchant_first_name text,
+		merchant_last_name text,
+		merchant_address1 text,
+		merchant_address2 text,
+		merchant_suburb text,
+		merchant_state text,
+		merchant_postcode integer,
+		merchant_email text,
+		merchant_contact_number text,
+		created_date text not null
+	)
+    
 <br><br>
+
+
+
 
 
 8. One time off (once off) codes in folder /one_time_off_code
