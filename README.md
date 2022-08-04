@@ -77,7 +77,7 @@ In design of the code, 2 main things were always under consideration:
     The entire curation process is managed by a control table control_curation_stream, both target curation table and corresponding DML queries were stored in it, so that in the future if any changes, we do not need to make any change on the code but only update 1 record of this table.<br>
 
     Curation sample tables which can be used for analysts and data scientists (DB or table replica can be used for scientists to run their own tranning, supervised learning etc.)
-  
+```
         curation_transaction_historical_hub (
 		transaction_id integer not null,
 		transaction_amount integer not null,
@@ -121,7 +121,7 @@ In design of the code, 2 main things were always under consideration:
 		merchant_contact_number text,
 		created_date text not null
 	)
-    
+```    
 <br><br>
 
 
