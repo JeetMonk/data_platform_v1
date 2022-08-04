@@ -121,7 +121,7 @@ In design of the code, 2 main things were always under consideration:
 		merchant_email text,
 		merchant_contact_number text,
 		created_date text not null
-	),
+	)
 ```    
 <br>
 
