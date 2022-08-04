@@ -106,8 +106,8 @@ In design of the code, 2 main things were always under consideration:
 		transaction_approved text not null,
 		transcation_status text not null,
 		created_date text not null
-	)
-		,
+	),
+
 	curation_merchant_details_sat (
 		merchant_id integer not null,
 		merchant_company_name text,
@@ -123,7 +123,7 @@ In design of the code, 2 main things were always under consideration:
 		created_date text not null
 	),
 ```    
-<br><br>
+<br>
 
 
 
