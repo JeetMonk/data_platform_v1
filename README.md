@@ -12,8 +12,7 @@ This version of the platform contains the fowllowing functions:
 
 
 Some other functions could be added in the future version like reconcilidation check, exception data file population, data redundant and replica, and data prcoess track
-
-
+<br><br><br><br>
 
 
 ## Platform Content
