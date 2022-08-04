@@ -19,6 +19,7 @@ Some other functions could be added in the future version like reconcilidation c
 ## Platform Content
 
 This platform is mainly built in **python** language and the open source **SQLite3** is used as the DB for all the tables.
+<br><br><br><br>
 
 
 ### Required libraries 
